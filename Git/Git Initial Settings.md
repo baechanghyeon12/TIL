@@ -26,7 +26,6 @@
   ...
 ```
 > * git config <key> 명령으로 Git이 특정 Key에 대해 어떤 값을 사용하는지 확인할 수 있다.
-> '''
+> ```
 >   $ git config user.name
->   John Doe
-> '''
+> ```
