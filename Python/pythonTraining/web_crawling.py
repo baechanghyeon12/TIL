@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
-import urllib.request
+from urllib.request import urlopen
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
 
 url = ""
 response = requests.get(url)
@@ -9,17 +13,12 @@ if response.status_code == 200:
     html = response.text
     soup = BeautifulSoup(html, 'html.parser')
     imgs = soup.select('img')
-    print(len(imgs))
-    index = 0
-    for img in imgs:
-          # 이미지 데이터를 가져옴
-        index += 1
-        urllib.request.urlretrieve(img["src"],'fbk'+str(index)+'jpg')
-        # img_data = requests.get(img["src"]).content
-        # # 이미지를 파일로 저장 (파일명은 이미지 URL에서 추출하거나, 원하는 대로 지정)
-        # with open('downloaded_image_{index}.jpg', 'wb') as img_file:
-        #     img_file.write(img_data)
-else : 
+    n = 1
+    for i in imgs:
+        imgUrl = i['src']
+        img_data = urlopen(imgUrl).read()  # 수정된 부분: urlopen을 사용하여 이미지 데이터 가져오기
+        with open('./img/' + str(n) + '.jpg', 'wb') as h:  # 이미지 + 사진번호 + 확장자는 jpg
+            h.write(img_data)  # 수정된 부분: 이미지 데이터를 파일에 쓰기
+        n += 1
+else:
     print(response.status_code)
-
-    
