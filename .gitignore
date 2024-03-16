@@ -1,0 +1,11 @@
+.idea
+Java/java-start/.idea
+Java/java-start/out
+out
+TIL.iml
+.DS_Store
+Java/.DS_Store
+Python/.DS_Store
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
