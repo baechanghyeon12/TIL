@@ -8,15 +8,15 @@ public class ClassStart2 {
         for(int i = 0; i < studentNames.length; i++){
             System.out.println("이름:" + studentNames[i] + "나이:" + studentAges[i] + "성정:" + studentGrade[i]);
         }
-        String student1Name = "학생1";
-        int student1Age = 15;
-        int student1Grade = 90;
-
-        String student2Name = "학생2";
-        int student2Age = 16;
-        int student2Grade = 80;
-
-        System.out.println("이름:" + student1Name + "나이" + student1Name + "성적:" + student1Grade);
-        System.out.println("이름:" + student2Name + "나이" + student2Name + "성적:" + student2Grade);
+//        String student1Name = "학생1";
+//        int student1Age = 15;
+//        int student1Grade = 90;
+//
+//        String student2Name = "학생2";
+//        int student2Age = 16;
+//        int student2Grade = 80;
+//
+//        System.out.println("이름:" + student1Name + "나이" + student1Name + "성적:" + student1Grade);
+//        System.out.println("이름:" + student2Name + "나이" + student2Name + "성적:" + student2Grade);
     }
 }
