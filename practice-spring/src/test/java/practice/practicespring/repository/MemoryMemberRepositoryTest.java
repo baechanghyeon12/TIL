@@ -10,6 +10,8 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.*;
 
 public class MemoryMemberRepositoryTest {
+
+    // TestCode 만드는 방법
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach
