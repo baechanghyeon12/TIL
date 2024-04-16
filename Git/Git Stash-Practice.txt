@@ -1,0 +1,2 @@
+git stash
+git stash --include-untracked 새로운 파일을 stash하기 위한 옵션
