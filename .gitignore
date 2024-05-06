@@ -9,3 +9,4 @@ Python/.DS_Store
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+demo/src/main/resources/application.properties
